@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import firebase from 'firebase'
 import Note from './Note'
 
 class Board extends Component {
@@ -25,6 +26,12 @@ class Board extends Component {
             ]
         }
     } 
+
+    componentDidMount = () => {
+        var db = firebase.firestore();
+
+        
+    }
 
     render = () => {
         return (
