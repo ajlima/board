@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import firebase from 'firebase'
+import * as firebase from 'firebase'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
