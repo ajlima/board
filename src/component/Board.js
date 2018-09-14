@@ -8,29 +8,20 @@ class Board extends Component {
         super(props)
         this.state = {
             notes: [
-                { 
-                    id: 1,
-                    titulo: 'Titulo 1', 
-                    descricao: 'Descrição 1'
-                },
-                { 
-                    id: 2,
-                    titulo: 'Titulo 2', 
-                    descricao: 'Descrição 2'
-                },
-                { 
-                    id: 3,
-                    titulo: 'Titulo 3', 
-                    descricao: 'Descrição 3'
-                }
             ]
         }
     } 
 
     componentDidMount = () => {
+        var notes = [];
         var db = firebase.firestore();
-
-        
+        db.collection('notes')
+            .onSnapshot(snapshot => {
+                snapshot.forEach(d => {
+                    notes.push(d.data())
+                })
+                this.setState({notes: notes})
+            })
     }
 
     render = () => {
