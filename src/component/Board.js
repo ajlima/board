@@ -4,6 +4,7 @@ import Note from './Note'
 
 //https://medium.com/@hrutjes/building-a-react-firestore-app-with-zero-effort-and-mobx-525df611eabf
 //https://github.com/IjzerenHein/firestorter
+//https://github.com/GeekyAnts/firestore-react
 class Board extends Component {
 
     constructor(props) {
