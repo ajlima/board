@@ -3,6 +3,7 @@ import firebase from 'firebase'
 import Note from './Note'
 
 //https://medium.com/@hrutjes/building-a-react-firestore-app-with-zero-effort-and-mobx-525df611eabf
+//https://github.com/IjzerenHein/firestorter
 class Board extends Component {
 
     constructor(props) {
