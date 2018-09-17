@@ -9,13 +9,8 @@ class Board extends Component {
         super(props)
         this.dataProvider = firebase.firestore().collection('notes');
         this.state = {
-<<<<<<< HEAD
             fetching: false,
             notes: []
-=======
-            notes: [
-            ]
->>>>>>> 91a82c103a2955f7114d6af6f1963dc5e77b7a40
         }
     } 
 
@@ -32,23 +27,11 @@ class Board extends Component {
     }
 
     componentDidMount = () => {
-<<<<<<< HEAD
         this.unsubscribeSnapshot = this.dataProvider.onSnapshot(this.onUpdateSnapshot);
     }
 
     componentWillUnmount = () => {
         this.unsubscribeSnapshot()
-=======
-        var notes = [];
-        var db = firebase.firestore();
-        db.collection('notes')
-            .onSnapshot(snapshot => {
-                snapshot.forEach(d => {
-                    notes.push(d.data())
-                })
-                this.setState({notes: notes})
-            })
->>>>>>> 91a82c103a2955f7114d6af6f1963dc5e77b7a40
     }
 
     render = () => {
